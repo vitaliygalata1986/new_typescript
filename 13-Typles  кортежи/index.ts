@@ -24,3 +24,11 @@ const userDataTuple3: [...boolean[], number, string] = [
 ];
 
 // const newRes = userDataTuple2.map((t) => `${t.toUpperCase()} - data`);
+
+type MyTuple = [number, string, boolean];
+
+const myTuple: MyTuple = [1, 'text', true];
+
+myTuple.forEach((element) => {
+  console.log(element); // 1 text node
+});
