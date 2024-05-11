@@ -6,7 +6,7 @@ const userDataTuple: [boolean, number, string] = [false, 20, 'John'];
 // userDataTuple.push(50);
 // userDataTuple[3];
 const res = userDataTuple.map((t) => `${t} - data`);
-// console.log(res); // [ 'false - data', '20 - data', 'John - data' ]
+console.log(res); // [ 'false - data', '20 - data', 'John - data' ]
 
 const userDataTuple2: [boolean, number, ...string[]] = [
   true,
@@ -16,7 +16,6 @@ const userDataTuple2: [boolean, number, ...string[]] = [
 ];
 // деструктуризируем
 const [isLogged, age, userName] = userDataTuple;
-// console.log(isLogged, age, userName); // false 20 John
 
 const userDataTuple3: [...boolean[], number, string] = [
   true,
