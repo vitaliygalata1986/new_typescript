@@ -9,7 +9,7 @@ const data: (string | number)[] = ['name', 25];
 // аннотация аргументов функций
 function printMsg(msg: string | number): void {
   console.log(msg);
-  // console.log(msg.toLowerCase());
+  console.log(msg.toLowerCase());
 }
 
 printMsg(4); // 4
