@@ -1,4 +1,5 @@
 const serverConfig: { protocol: 'http' | 'https'; port: 3000 | 3001 } = {
+  // { protocol: 'http' | 'https'; port: 3000 | 3001 } это объектные литералы
   protocol: 'https',
   port: 3001,
 };
