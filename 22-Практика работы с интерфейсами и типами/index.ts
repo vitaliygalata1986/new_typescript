@@ -71,7 +71,7 @@ function printReport(data: TotalWarehouse): string {
   );
 
   if (itemsToOrder.length > 0) {
-    const items:string = itemsToOrder.join(', ');
+    const items: string = itemsToOrder.join(', ');
     return `We need this items: ${items}`;
   } else {
     return 'Everything fine';
