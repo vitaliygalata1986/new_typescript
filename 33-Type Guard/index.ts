@@ -69,7 +69,7 @@ function repairVehicle(vehicle: Car | Ship) {
   if (isCar(vehicle)) {
     // если это автомобиль
     console.log(vehicle.wheels.number); // то в таком случае мы имеем доступ до колес, тоесть мы будем иметь доступ к тем свойствам, которые есть в интерфейсе Car
-  } else if (isSip(vehicle)) {
+  } else if (isShip(vehicle)) {
     console.log(vehicle.sail);
   } else {
     // код сюда некогда не дойдет
@@ -87,7 +87,7 @@ function isCar(car: Car | Ship): car is Car {
   return (car as Car).wheels.number !== undefined; // если мы утвердили car как автомобиль, то у него должно быть свойство wheels
 }
 
-function isSip(ship: Car | Ship): ship is Ship {
+function isShip(ship: Car | Ship): ship is Ship {
   return 'sail' in ship;
 }
 
@@ -100,4 +100,10 @@ const audi = {
   },
 };
 
-repairVehicle(audi); // 4
+const yalta = {
+  engine: 'big',
+  sail: 'some',
+};
+
+repairVehicle(audi); // 4;
+// repairVehicle(yalta); // some
