@@ -87,3 +87,10 @@ function processing<T>(data: T): T {
 }
 
 let newFunc: Processing = processing;
+
+// альтеративный вариант
+interface ProcessingNew<T> {
+  (data: T): T;
+}
+
+let newFuncNew: ProcessingNew<string> = processing; // но тогда нам придеться указывать каждый раз, что именно будет находится внутри этой функции
