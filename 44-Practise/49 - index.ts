@@ -56,7 +56,7 @@ interface AmountOfFigures {
 
 // тип, который мы обозначили: T extends Figure и нам может приходить массив таких типов T[]
 function calculateAmountOfFigures<T extends Figure>(
-  figures: T[]
+  figures:T[]
 ): AmountOfFigures {
   const amount: AmountOfFigures = {
     squares: 0,
@@ -85,10 +85,10 @@ function calculateAmountOfFigures<T extends Figure>(
 }
 
 interface CustomFigure extends Figure {
-  data?: {}; // data - не бязательный параметр
+  data?: {}; // data - не обязательный параметр
 }
 
-const data:CustomFigure[] = [
+const data: CustomFigure[] = [
   {
     name: FigureNames.Rect,
     data: { a: 5, b: 10 },
